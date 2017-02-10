@@ -24,9 +24,26 @@ function createFirstScene() {
 // Remember, for the shapes to show up on the canvas, you'll need to CALL the function.
 function createSecondScene() {
 makeRect(0,0,500,200,"black")
-makeEllipse(85,20,20,15,"blue")
-makeLine(43,22,43,84,"lightblue",3)
-
+makeEllipse(85,20,20,15,"dodgerblue")
+makeEllipse(85,20,17,13,"grey")
+makeLine(85,35,85,45,"grey",3)
+makeLine(100,65,110,45,"grey",3)
+makeLine(70,65,60,45,"grey",3)
+makeLine(90,75,110,100,"grey",3)
+makeLine(77,75,55,100,"grey",3)
+makeRect(70,45,30,35,"dodgerblue")
+makeRect(75,47,20,10,"black")
+makeRect(77.5,48.5,15,7,"grey")
+makeRect(110,100,)
+makeRect()
+makeCircle(73,60,2.5,"grey")
+makeCircle(80,60,2.5,"grey")
+makeCircle(78,17,7,"dodgerblue")
+makeCircle(93,17,7,"dodgerblue")
+makeCircle(93,17,4,"#474747")
+makeCircle(78,17,4,"#474747")
+makeCircle()
+makeCircle()
 }
 
 
@@ -82,7 +99,7 @@ function makeCircle(cx, cy, r, fill, opacity) {
   return circle
 }
 
-function makeRect(x, y, width, height, fill, opacity) {
+function makeRect(x, y, width, height, fill, opacity, transform) {
   var rect = document.createElementNS(namespace, "rect")
   rect.setAttribute("x", x)
   rect.setAttribute("y", y)
@@ -90,6 +107,7 @@ function makeRect(x, y, width, height, fill, opacity) {
   rect.setAttribute("height", height)
   rect.setAttribute("fill", fill)
   rect.setAttribute("opacity", opacity)
+  rect.setAttribute("transform", transform)
 
   var canvas = document.getElementById("canvas")
   canvas.appendChild(rect)
