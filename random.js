@@ -16,6 +16,11 @@ function createFirstScene() {
     makeEllipse(150, 75, 45,20, "black")
     makeLine(55,0,100,30,"black",5)
     makeLine(150,0,100,30,"black",5)
+    
+    var penguino = Math.random()
+    if (penguino > 0.5) {
+    makeImage("http://3.bp.blogspot.com/-GAbf7eeilSM/UFhuOLH0FPI/AAAAAAAAF1M/l2xHtDIhPCY/s1600/penguinus%20Madagascar%202%20transparent.png", 200, 100, 100, 100)
+    }
 }
 
 
@@ -26,24 +31,28 @@ function createSecondScene() {
 makeRect(0,0,500,200,"black")
 makeEllipse(85,20,20,15,"dodgerblue")
 makeEllipse(85,20,17,13,"grey")
+
 makeLine(85,35,85,45,"grey",3)
 makeLine(100,65,110,45,"grey",3)
 makeLine(70,65,60,45,"grey",3)
 makeLine(90,75,110,100,"grey",3)
 makeLine(77,75,55,100,"grey",3)
+
 makeRect(70,45,30,35,"dodgerblue")
 makeRect(75,47,20,10,"black")
 makeRect(77.5,48.5,15,7,"grey")
-makeRect(110,100,)
-makeRect()
+
 makeCircle(73,60,2.5,"grey")
 makeCircle(80,60,2.5,"grey")
 makeCircle(78,17,7,"dodgerblue")
 makeCircle(93,17,7,"dodgerblue")
 makeCircle(93,17,4,"#474747")
 makeCircle(78,17,4,"#474747")
-makeCircle()
-makeCircle()
+
+var sun = Math.random() 
+if (sun > 0.5) {
+makeImage("http://images.clipartpanda.com/sun-transparent-background-sun_strong_bold_T.png", 0, 0, 50, 50, 1)
+    }
 }
 
 
@@ -51,13 +60,17 @@ makeCircle()
 // You need to use at least 3 different types of shape.
 // Remember, for the shapes to show up on the canvas, you'll need to CALL the function.
 function createThirdScene() {
-
-
-
-
-
-
-
+makeRect(0,0,500,200,"black")
+makeRect(100, 60, 250, 100, "grey")
+makeCircle(150, 100, 15, "darkblue")
+makeCircle(300, 100, 15, "darkblue")
+makeRect(175, 100, 100, 40, "maroon")
+var teeth = Math.random()
+if (teeth > 0.5) {
+makeRect(175, 100, 10, 17, "white")
+makeRect(190, 100, 10 , 17, "white")
+makeRect(205, 100, 10, 17, "white")
+    }
 }
 
 
@@ -72,6 +85,7 @@ function createRandomScene() {
     createFirstScene()
     }
     else if (myNumber<0.67) {
+    
       createSecondScene()
     }else {
       createThirdScene()
